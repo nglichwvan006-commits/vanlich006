@@ -1,0 +1,19 @@
+int timKiemNhiPhan(daySo b, int f) {
+	int fisrt = 0;
+	int last = laySoPhanTu(b) - 1;
+	int mid;
+	do {
+		mid = (fisrt + last) / 2;
+		if (f == b.ds[mid]) {
+			return mid;
+		}
+		else if (f < b.ds[mid]) {
+			last = mid - 1;
+		}
+		else {
+			fisrt = mid + 1;
+		}
+
+	} while (fisrt <= last);
+	return -1; // neu thuc hien xong vong lap ma khong tim duoc thi tra ve -1
+}
