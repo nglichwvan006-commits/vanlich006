@@ -1,0 +1,12 @@
+void sapXep(daySo& a) {
+	//Bubble Sort
+	for (int i = 0; i < laySoPhanTu(a); i++) {
+		for (int j = laySoPhanTu(a) - 1; j > i; j--) {
+			if (a.ds[j - 1] > a.ds[j]) {
+				int temp = a.ds[j - 1];
+				a.ds[j - 1] = a.ds[j];
+				a.ds[j] = temp;
+			}
+		}
+	}
+}
