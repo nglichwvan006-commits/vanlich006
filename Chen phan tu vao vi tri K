@@ -1,0 +1,7 @@
+void chenPTVaoViTriK(daySo &a, int viTri, int gt) {
+	for (int i = laySoPT(a) - 1; i >= viTri; i--) {
+		a.arr[i + 1] = a.arr[i];
+	}
+	a.arr[viTri] = gt;
+	a.x++;  // quan li so phan tu cua ds sau khi chen them vao mot phan tu
+}
