@@ -1,0 +1,20 @@
+void tachHaiDSChanLe(daySo& a, daySo& b, daySo &c) {
+	khoiTaoDS(b);
+	khoiTaoDS(c);
+	int temp2 = 0;
+	int temp3 = 0;
+	for (int i = 0; i < laySoPT(a); i++) {
+		if (a.arr[i] % 2 == 0) {
+			int temp = a.arr[i];
+			b.arr[temp2] = temp;
+			temp2++;
+		}
+		else {
+			int temp = a.arr[i];
+			c.arr[temp3] = temp;
+			temp3++;
+		}
+	}
+	b.x = temp2;
+	c.x = temp3;
+}
